@@ -25,14 +25,14 @@ const variation= response.DISPLAY [cryptoSelected][coinSelected].CHANGEPCT24HOUR
 console.log (coinInfo)
     
 
-if (amounValue != '') {
+if (amountValue != '') {
     const result= Number(amountValue) / response.RAW[cryptoSelect][coinSelected].PRICE;
     coinInfo.innerHTML =`
          <p class="info"> El precio es: <span class="price">${price}</span></p>
                 <p class="info"> El precio más alto es: <span class="price">${priceHigh}</span></p>
                 <p class="info"> El precio más bajo es: <span class="price">${priceLow}</span></p>
                 <p class="info"> Variación 24 horas: <span class="price">${variation}%</span></p>
-                <p class="info"> Puedes comprar: <span class="price">${result.toFixed(4)} ${cryptoSelected} </span></p>
+                <p class="info"> Puedes comprar: <span class="price">${result.toFixed(4)} ${cryptoSelected}</span></p>
                 `;
 } else{
     coinInfo.innerHTML =`
