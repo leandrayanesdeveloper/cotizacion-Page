@@ -11,22 +11,17 @@ e.preventDefault();
 const coinSelected = [...coin.children].find(option => option.selected).value;
 const cryptoSelected = [...crypto.children].find(option => option.selected).value;
 const amountValue = amount.value;
-console.log (coinSelected, cryptoSelected, amountValue)
     
 try {
-    const coinInfo.innerHTML = `
-    <div class="loader"></div>
-    `;
-    const response = await(await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoSelected}&tsyms=${coinSelected}`)).json();
+ coinInfo.innerHTML = `<div class="loader"></div>`;
+    const response = await( await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoSelected}&tsyms=${coinSelected}`)).json();
     const price= response.DISPLAY[cryptoSelected][coinSelected].PRICE;
 const priceHigh= response.DISPLAY[cryptoSelected][coinSelected].HIGH24HOUR;
 const priceLow= response.DISPLAY[cryptoSelected][coinSelected].LOW24HOUR;
 const variation= response.DISPLAY [cryptoSelected][coinSelected].CHANGEPCT24HOUR;
-console.log (coinInfo)
-    
 
-if (amountValue != '') {
-    const result= Number(amountValue) / response.RAW[cryptoSelect][coinSelected].PRICE;
+if (amountValue !== '') {
+    const result= Number(amountValue) / response.RAW[cryptoSelected][coinSelected].PRICE;
     coinInfo.innerHTML =`
          <p class="info"> El precio es: <span class="price">${price}</span></p>
                 <p class="info"> El precio más alto es: <span class="price">${priceHigh}</span></p>
