@@ -27,8 +27,7 @@ h1,h2,p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-   
+    gap: 1rem;  
 }
 
 #ttimg{
@@ -59,7 +58,6 @@ h1,h2,p {
 }
 
 
-
 select{
     font-size: 1rem;
     height: 35px;
@@ -72,7 +70,6 @@ select{
     color: white;
     font-size: 1.2rem;
 }
-
 
 #coin-form{
    
@@ -120,7 +117,7 @@ background-color: #a069df;
 body{
     margin: 0;
     background-color: #49086f;
-    background-image: url("../imag/Create Amazing Mockups.jpg");
+    background-image: url("../cotizacion-Page/imag/Create\ Amazing\ Mockups.jpg");
     background-position: center;
     background-size: cover;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -151,8 +148,8 @@ footer{
    
    footer img{
     
-     height: 2.4rem;
-     width: 2.4rem;
+height: 2.4rem;
+ width: 2.4rem;
      
    }
 
